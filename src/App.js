@@ -5,13 +5,16 @@ import { About, Home } from "./pages";
 function App() {
   const handleMouseOver = () => {
     About.preload();
+    Home.preload();
   };
 
   return (
     <div>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" onMouseOver={handleMouseOver}>
+            Home
+          </Link>
         </li>
         <li>
           <Link to="/about" onMouseOver={handleMouseOver}>
